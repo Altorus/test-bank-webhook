@@ -14,7 +14,6 @@ class OrganisationViewSet(viewsets.GenericViewSet):
     def get_serializer_class(self):
         if self.action == "balance":
             return serializers.OrganisationBalanceSerializer
-        return self.serializer_class
 
 
     @action(detail=True, methods=["get"])
